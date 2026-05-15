@@ -1,0 +1,379 @@
+:root {
+    --shopee-orange: #ee4d2d;
+    --shopee-orange-hover: #f05d40;
+    --text-color: #333;
+    --text-light: #fff;
+    --bg-gray: #f5f5f5;
+    --border-color: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    color: var(--text-light);
+    padding-bottom: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.header-top a {
+    color: var(--text-light);
+    margin-right: 15px;
+    transition: opacity 0.2s;
+}
+
+.header-top a:hover {
+    opacity: 0.8;
+}
+
+.header-top-right a {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.header-link-bold {
+    font-weight: bold;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.header-logo {
+    width: 200px;
+}
+
+.shopee-logo-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shopee-logo-text i {
+    font-size: 40px;
+}
+
+.header-search {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.search-bar {
+    display: flex;
+    background: white;
+    border-radius: 2px;
+    padding: 3px;
+    height: 40px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background: var(--shopee-orange);
+    color: white;
+    border: none;
+    width: 60px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: var(--shopee-orange-hover);
+}
+
+.search-tags {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.search-tags a {
+    color: white;
+    margin-right: 10px;
+}
+
+.header-cart {
+    width: 100px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* Banner Section */
+.banner-section {
+    display: flex;
+    gap: 5px;
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.banner-main {
+    flex: 2;
+}
+
+.banner-main img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.banner-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.banner-side img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+}
+
+/* Category Icons */
+.category-icons {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.cat-icon-bg {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.cat-item:hover .cat-icon-bg {
+    transform: translateY(-2px);
+}
+
+.cat-icon-bg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.cat-item span {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* Categories Section */
+.categories {
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.section-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-header h2 {
+    font-size: 16px;
+    color: rgba(0,0,0,.54);
+    font-weight: 500;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cat-box {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.cat-box:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    z-index: 1;
+}
+
+.cat-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.cat-box p {
+    font-size: 14px;
+    color: rgba(0,0,0,.8);
+}
+
+/* Flash Sale */
+.flash-sale {
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.flash-sale-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fs-title {
+    color: var(--shopee-orange);
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.fs-view-all {
+    color: var(--shopee-orange);
+    font-size: 14px;
+}
+
+.product-carousel {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.product-card {
+    min-width: 190px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+
+.product-img {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.product-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255,212,36,.9);
+    color: #eb2506;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-price {
+    color: var(--shopee-orange);
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: #ffbda6;
+    height: 16px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    background: linear-gradient(to right, #ff6633, #ee4d2d);
+    height: 100%;
+}
+
+.progress-bar span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    line-height: 16px;
+    text-transform: uppercase;
+}
